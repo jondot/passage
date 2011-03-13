@@ -15,14 +15,13 @@ Jeweler::Tasks.new do |gem|
   gem.name = "passage"
   gem.homepage = "http://github.com/jondot/passage"
   gem.license = "MIT"
-  gem.summary = %Q{not yet}
-  gem.description = %Q{not yet}
+  gem.summary = %Q{Your personal tweakable OpenID server.}
+  gem.description = %Q{A simple, tweakable OpenID provider for private use.}
   gem.email = "jondotan@gmail.com"
   gem.authors = ["Dotan Nahum"]
-  # Include your dependencies below. Runtime dependencies are required when using your gem,
-  # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
-  #  gem.add_development_dependency 'rspec', '> 1.2.3'
+  gem.executables = ['passage']
+  gem.files = Dir.glob('lib/**/*.rb')
+  gem.files.include ['ids.yml.example', 'config.ru']
 end
 Jeweler::RubygemsDotOrgTasks.new
 

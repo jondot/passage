@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+
+
+help = <<HELP
+Passage is your personal tweakable OpenID provider.
+
+Usage:
+  passage [OPTIONS]
+
+Options:
+HELP
+
+require 'optparse'
+require 'passage'
+
+exec = {}
+options = { 'ids_file' => ENV['IDSFILE'] || 'ids.yml' }
+
+opts = OptionParser.new do |opts|
+  opts.banner = help
+
+  opts.on("--ids [IDSFILE]", "Configuration file for identities (yaml).") do |c|
+    options['ids_file'] = c
+  end
+
+  opts.on("--version", "Display current version.") do
+    puts "Passage v" + Passage::VERSION
+    exit 0
+  end
+end
+
+begin
+  opts.parse!
+rescue OptionParser::InvalidOption
+  puts "passage: #{$!.message}"
+  puts "passage: try 'passage --help' for more information"
+  exit 1
+end
+
+require 'passage/app'
+Passage::App.run!(options)
+

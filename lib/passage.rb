@@ -1,0 +1,1 @@
+require 'passage/version'

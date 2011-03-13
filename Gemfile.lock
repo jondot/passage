@@ -1,0 +1,40 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    backports (2.0.2)
+    git (1.2.5)
+    jeweler (1.5.2)
+      bundler (~> 1.0.0)
+      git (>= 1.2.5)
+      rake
+    monkey-lib (0.5.4)
+      backports
+    rack (1.2.2)
+    rake (0.8.7)
+    rcov (0.9.9)
+    ruby-openid (2.1.8)
+    sinatra (1.2.0)
+      rack (~> 1.1)
+      tilt (>= 1.2.2, < 2.0)
+    sinatra-advanced-routes (0.5.1)
+      monkey-lib (~> 0.5.0)
+      sinatra (~> 1.0)
+      sinatra-sugar (~> 0.5.0)
+    sinatra-reloader (0.5.0)
+      sinatra (~> 1.0)
+      sinatra-advanced-routes (~> 0.5.0)
+    sinatra-sugar (0.5.0)
+      monkey-lib (~> 0.5.0)
+      sinatra (~> 1.0)
+    tilt (1.2.2)
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  bundler (~> 1.0.0)
+  jeweler (~> 1.5.2)
+  rcov
+  ruby-openid
+  sinatra
+  sinatra-reloader
