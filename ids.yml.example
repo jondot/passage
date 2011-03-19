@@ -1,7 +1,7 @@
-'http://localhost:9292/foo':
+'http://localhost:9292/ids/foo':
     email: foo@foo.org
-'http://77.127.181.233:9292/foo':
+'http://77.127.240.49:9292/ids/foo':
     email: foo@foo.org
-'http://77.124.212.222:4567/pookie':
+'http://77.124.212.222:4567/ids/pookie':
     email: goo@goo.org
 
