@@ -23,6 +23,11 @@ opts = OptionParser.new do |opts|
     options['ids_file'] = c
   end
 
+  opts.on("--auth [AUTH]", "Authentication strategy use_snake_case e.g. pass_through") do |c|
+    options['auth'] = c
+  end
+
+
   opts.on("--version", "Display current version.") do
     puts "Passage v" + Passage::VERSION
     exit 0
@@ -38,5 +43,7 @@ rescue OptionParser::InvalidOption
 end
 
 require 'passage/app'
+
+Passage::App.configure! options
 Passage::App.run!(options)
 
