@@ -1,6 +1,4 @@
 require 'sinatra/base'
-require 'sinatra/reloader'
-
 
 module Passage
   class App < Sinatra::Base
