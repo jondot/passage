@@ -4,4 +4,7 @@
     email: foo@foo.org
 'http://77.124.212.222:4567/ids/pookie':
     email: goo@goo.org
+!ruby/regexp /http:\/\/localhost:4567\/ids\/(.*)/:
+    email: '#{$1}@foo.org'
+    nickname: '#{$1}'
 

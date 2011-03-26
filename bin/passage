@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 
+
 help = <<HELP
 Passage is your personal tweakable OpenID provider.
 
@@ -10,11 +11,12 @@ Usage:
 Options:
 HELP
 
+
 require 'optparse'
 require 'passage'
 
 exec = {}
-options = { 'ids_file' => ENV['IDSFILE'] || 'ids.yml' }
+options = {}
 
 opts = OptionParser.new do |opts|
   opts.banner = help

@@ -7,6 +7,7 @@ GEM
       bundler (~> 1.0.0)
       git (>= 1.2.5)
       rake
+    minitest (2.0.2)
     monkey-lib (0.5.4)
       backports
     rack (1.2.2)
@@ -34,6 +35,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.0.0)
   jeweler (~> 1.5.2)
+  minitest
   rcov
   ruby-openid
   sinatra

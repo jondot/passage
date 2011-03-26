@@ -1,6 +1,7 @@
 require 'yaml'
 require 'logger'
 require 'sinatra/base'
+require 'passage/identities'
 
 module Passage
   module Environment
@@ -12,9 +13,9 @@ module Passage
 
       # load identities
       if(opts[:ids_file])
-        ids = YAML::load_file(opts[:ids_file])
+        ids = Identities.new YAML::load_file(opts[:ids_file] ||  ENV['PSG_IDS_FILE'] )
         set :identities, ids
-        log.info "loaded #{ids.keys.count} identities from #{opts[:ids_file]}"
+        log.info "loaded #{ids.count} identities from #{opts[:ids_file]}"
       else
         set :identities, {}
         log.info "no identities loaded (free for all)"
@@ -25,8 +26,8 @@ module Passage
         require f
         log.debug "discovered auth: #{File.basename(f)[0..-4]}"
       end
-      register constantize(opts[:auth])
-      log.info "loaded auth: #{opts[:auth]}"
+      register constantize(opts[:auth] || ENV['PSG_AUTH'])
+      log.info "loaded #{opts[:auth] || ENV['PSG_AUTH']} authentication"
 
     end
 

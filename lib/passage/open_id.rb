@@ -40,8 +40,10 @@ module Passage
   private
     def add_sreg(oidreq, oidresp, identity, details)
       return if details.nil?
-      sregreq = OpenID::SReg::Request.from_opsetenid_request(oidreq)
-      sregresp = OpenID::SReg::Response.extract_response(sregreq, identities[identity])
+      sregreq = OpenID::SReg::Request.from_openid_request(oidreq)
+      return if sregreq.nil?
+      p details
+      sregresp = OpenID::SReg::Response.extract_response(sregreq, details)
       oidresp.add_extension(sregresp)
     end
 

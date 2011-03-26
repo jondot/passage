@@ -24,6 +24,7 @@ module Passage
 
           identity = oidreq.identity
           auth_validate!(identity, oidreq.trust_root)
+          puts identity
           oidresp = openid_positive_assertion(oidreq, identity, app.identities[identity])
         else
           oidresp = server.handle_request(oidreq)
