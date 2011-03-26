@@ -2,7 +2,10 @@ source :gemcutter
 
 gem 'sinatra'
 gem 'ruby-openid'
-gem 'minitest'
+
+group :test do
+  gem 'riot'
+end
 
 group :development do
   gem "bundler", "~> 1.0.0"
