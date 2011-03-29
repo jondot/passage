@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dotan Nahum"]
-  s.date = %q{2011-03-26}
+  s.date = %q{2011-03-29}
   s.default_executable = %q{passage}
   s.description = %q{A simple, tweakable OpenID provider for private use.}
   s.email = %q{jondotan@gmail.com}
@@ -28,7 +28,8 @@ Gem::Specification.new do |s|
     "lib/passage/environment.rb",
     "lib/passage/identities.rb",
     "lib/passage/open_id.rb",
-    "lib/passage/version.rb"
+    "lib/passage/version.rb",
+    "views/identity.erb"
   ]
   s.homepage = %q{http://github.com/jondot/passage}
   s.licenses = ["MIT"]

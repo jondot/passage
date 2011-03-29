@@ -22,6 +22,7 @@ Jeweler::Tasks.new do |gem|
   gem.executables = ['passage']
   gem.files = Dir.glob('lib/**/*.rb')
   gem.files.include ['ids.yml.example', 'config.ru']
+  gem.files.include Dir.glob('views/**/*.*')
 end
 Jeweler::RubygemsDotOrgTasks.new
 
