@@ -6,7 +6,7 @@ require 'passage/identities'
 module Passage
   module Environment
     def configure!(opts)
-      opts[:auth] ||= :pass_through
+      opts[:auth] ||= :omni
 
       set :sessions, true
       set :log, opts[:logger] || Logger.new(STDOUT)

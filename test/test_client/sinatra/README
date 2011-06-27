@@ -1,0 +1,5 @@
+$ gem install bundler
+$ bundle install
+$ rackup
+
+visit http://localhost:9292

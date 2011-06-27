@@ -2,6 +2,7 @@ source :gemcutter
 
 gem 'sinatra'
 gem 'ruby-openid'
+gem 'omniauth'
 
 group :test do
   gem 'riot'
